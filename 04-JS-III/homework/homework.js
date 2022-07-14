@@ -4,6 +4,9 @@ function devolverPrimerElemento(array) {
   // Devuelve el primer elemento de un  array (pasado por parametro)
   // Tu código:
   return array[0];
+
+  //Otra forma:
+  //return array.shift();
 }
 
 
@@ -31,6 +34,12 @@ function incrementarPorUno(array) {
     nuevoArray[i] = array[i] + 1;
   }
   return nuevoArray;
+
+  //Otra forma:
+  //let arr = array.map(function(elm){
+  //  return elm + 1;
+  //});
+  //return arr;
 }
 
 
@@ -59,20 +68,23 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
-  var frase = "";
-  for (var i = 0; i < palabras.length; i++) {
-    if (i < palabras.length - 1) {
-      frase = frase + palabras[i] + " ";
-    }
-    if (i === palabras.length - 1) {
-      frase = frase + palabras[i];
+  return palabras.join(" ");
 
-    }
-  }
-  return frase;
+  //Otra forma:
+  //var frase = "";
+  //for (var i = 0; i < palabras.length; i++) {
+  //if (i < palabras.length - 1) {
+  //frase = frase + palabras[i] + " ";
+  //}
+  //if (i === palabras.length - 1) {
+  //frase = frase + palabras[i];
+
+  //}
+  //}
+  //return frase;
+  //}
 }
-//var array2 = ["Hello", "world!"];
-//return array2.join(" ");
+
 
 
 function arrayContiene(array, elemento) {
@@ -83,6 +95,13 @@ function arrayContiene(array, elemento) {
     return true;
   }
   return false;
+
+  //for(let i = 0; i < array.length; i++){
+  //if(array[i] === elemento){
+  //return true;
+  //}
+  //}
+  //return false;
 }
 
 
@@ -110,6 +129,9 @@ function promedioResultadosTest(resultadosTest) {
     summ = summ + resultadosTest[i++];
   }
   return summ / ArrayLen;
+
+  //Otra forma:
+  //return agregarNumeros(resultadosTest) / resultadosTest.length;
 }
 
 
@@ -176,6 +198,14 @@ function empiezaConNueve(n) {
     return true;
   }
   return false;
+
+  //Otra forma:
+  //let num = n.toString();
+  //let num1 = num.spli("");
+  //if (num1[0] === "9"){
+  //return true;
+  //}
+  //return false;
 }
 
 
